@@ -1,12 +1,13 @@
 import pandas as pd
 import os 
 
-directory = 'Files2sort'
+input_dir = os.path.join('..', 'Files2sort')
 keys = pd.read_excel('Sort_keys.xlsx', index_col=0)
+output_dir = os.path.join('..', 'Impedances.xlsx')
 
-with pd.ExcelWriter('Impedances.xlsx') as writer:
-    for fname in os.listdir(directory):
-        path = os.path.join(directory, fname)
+with pd.ExcelWriter(output_dir) as writer:
+    for fname in os.listdir(input_dir):
+        path = os.path.join(input_dir, fname)
         assy_start = fname.find('-')
         assy_end = fname.find('.')
         assy_type = fname[assy_start+1:assy_end]
