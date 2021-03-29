@@ -85,6 +85,7 @@ with pd.ExcelWriter(output_dir, engine='xlsxwriter') as writer:
                 names=['Impedance(MOhm)','Phase']
             )
             impedance['Channel']=keys[this_part['ASSY #']]
+            impedance = impedance.dropna()
             impedance_sorted = impedance.sort_values('Channel')
             impedance_sorted = impedance_sorted.set_index('Channel')
 
