@@ -60,7 +60,8 @@ if len(np.unique(order_num)) > 1:
     print('Error: there is more than one order contained in the Files2sort directory')
     sys.exit()
 else:
-    output_dir = 'Datasheets/Datasheet-' + order_num[0] + '.xlsx'
+
+    output_dir = 'Datasheets/Datasheet-' + str(order_num[0]) + '.xlsx'
 
 with pd.ExcelWriter(output_dir, engine='xlsxwriter') as writer:
     assy_dict = {}
