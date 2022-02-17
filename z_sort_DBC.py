@@ -34,7 +34,7 @@ with pd.ExcelWriter(output_dir, engine='xlsxwriter') as writer:
         if '.csv' in fname:
             count = count + 1
             part_num = fname[:fname.find('.')]
-                
+            # need to label with part_num    
             path = os.path.join(input_dir, fname)
             impedance = pd.read_csv(path, usecols=[0, 4])
             

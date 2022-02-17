@@ -7,7 +7,7 @@ import numpy as np
 import sys
 import os 
 
-input_dir = os.path.join('..', 'Files2sort')
+input_dir = os.path.join('..', 'FilesCNT2sort')
 traveler_sheet_dir = os.path.join('..', 'TRAVELER SHEET-2022-UPTODATE_R1.0.xlsx')
 traveler_sheet = pd.read_excel(traveler_sheet_dir, usecols = [1, 2, 3, 6, 9, 11, 12], header =0, skiprows=[1,2])
 # 1: date; 2: order#; 3: Part num; 6: Probe type; 9: Assy type; 11: Sharp; 12: Fiber
