@@ -98,6 +98,7 @@ with pd.ExcelWriter(output_dir, engine='xlsxwriter') as writer:
                 skipfooter=1, 
                 index_col=0, 
                 names=['Z(MOhm)','Phase'],
+                encoding = 'unicode_escape'
             )
             impedance['Channel']=keys.loc[:, this_part['ASSY #']]
             impedance = impedance.dropna()
