@@ -8,7 +8,7 @@ import sys
 import os 
 
 input_dir = os.path.join('..', 'FilesDBC2sort')
-output_dir = 'Datasheets/Datasheet.xlsx'
+output_dir = '../Datasheets_DBC/Datasheet.xlsx'
 
 def find_opens(data):
     opens = []

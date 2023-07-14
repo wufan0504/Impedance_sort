@@ -61,7 +61,7 @@ if len(np.unique(order_num)) > 1:
     sys.exit()
 else:
 
-    output_dir = 'Datasheets/Datasheet-' + str(order_num[0]) + '.xlsx'
+    output_dir = '../Datasheets_CNT/Datasheet-' + str(order_num[0]) + '.xlsx'
 
 with pd.ExcelWriter(output_dir, engine='xlsxwriter') as writer:
     assy_dict = {}
@@ -87,7 +87,7 @@ with pd.ExcelWriter(output_dir, engine='xlsxwriter') as writer:
             probe_type = convert_probe(probe_type)
 
             if output_dir == '':
-                output_dir = 'Datasheet-' + order_num + '.xlsx'
+                output_dir = '../Datasheets_CNT/Datasheet-' + order_num + '.xlsx'
                 
             path = os.path.join(input_dir, fname)
             impedance = pd.read_table(
